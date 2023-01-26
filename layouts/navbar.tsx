@@ -10,7 +10,6 @@ import {
 import {BsBell} from "react-icons/bs";
 import Searchbox from "@/components/searchbox";
 import AvatarWithName from "@/components/avatarWithName";
-import {AvatarName} from "@chakra-ui/avatar/dist/avatar-name";
 
 class Navbar extends Component {
     render() {

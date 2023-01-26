@@ -16,7 +16,8 @@ export function Sidebar() {
                 </HStack>
                 <Box>
                     <Text fontSize={'small'} textAlign={['left','center']}>MENU</Text>
-                    <p>Test</p>
+                    <p>Sales</p>
+                    <p>Inventor</p>
                 </Box>
                 <Divider/>
                 <HStack alignItems='center'>

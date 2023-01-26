@@ -27,7 +27,7 @@ class Defaultlayout extends Component {
                     <GridItem>
                         <Navbar/>
                     </GridItem>
-                    <GridItem>
+                    <GridItem bgColor='#81a1c122'>
                         <Hero path={this.path} title='Dashboard'/>
                     </GridItem>
                     <GridItem>

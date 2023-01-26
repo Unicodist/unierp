@@ -1,6 +1,7 @@
 import {Avatar, Box, Flex, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Text} from "@chakra-ui/react";
 import React, {Component, PropsWithChildren, ReactNode} from "react";
 import AvatarProps from "@/types/avatarprops";
+import {getImage} from "@/helpers/image-helper";
 class AvatarWithName extends Component {
     props:AvatarProps
     constructor(props:AvatarProps) {
@@ -17,7 +18,9 @@ class AvatarWithName extends Component {
                     <Text fontSize='sm'>{this.props.designation}</Text>
                 </Box>
                 <Menu>
-                    <MenuButton as={Avatar}/>
+                    <MenuButton>
+                        <Avatar src={getImage('ashishneupane999@gmail.com')}/>
+                    </MenuButton>
                     <MenuList>
                         <MenuItem>Settings</MenuItem>
                         <MenuDivider/>
