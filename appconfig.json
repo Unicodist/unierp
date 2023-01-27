@@ -1,0 +1,10 @@
+{
+  "hostUrl": "http://localhost:55276",
+  "rootSuffix": "/api",
+  "routes": {
+    "loginRoute": "/login",
+    "account": {
+      "all": "/account"
+    }
+  }
+}

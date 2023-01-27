@@ -21,8 +21,8 @@ class PagingTable extends Component<PagingTableProps> {
     render() {
         return (
             <VStack>
-                <PagingTableToolbar/>
-                <TableContainer>
+                <TableContainer width={'100%'}>
+                    <PagingTableToolbar/>
                     <Table variant='simple'>
                         <TableCaption>{this.caption}</TableCaption>
                         <Thead>
@@ -38,9 +38,9 @@ class PagingTable extends Component<PagingTableProps> {
                             {this.data.map((row)=>{
                                 return (
                                     <Tr>
-                                        {this.columns.map((columnName)=>{
+                                        {this.columns.map((column)=>{
                                             return (
-                                                <Td>{row[columnName.key]}</Td>
+                                                <Td>{column.renderer==null?row[column.key]:column.renderer(row[column.key])}</Td>
                                             )
                                         })}
                                     </Tr>

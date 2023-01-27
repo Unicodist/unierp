@@ -12,7 +12,7 @@ class Hero extends Component {
     render() {
         return (
             <Box padding='20px'>
-                <Breadcrumb fontWeight='medium'>
+                <Breadcrumb fontWeight='medium' separator='✦'>
                     {this.props.path.map((item)=>{
                         return (
                             <BreadcrumbItem>

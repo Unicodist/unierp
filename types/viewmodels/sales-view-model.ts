@@ -5,7 +5,8 @@ export type SalesViewModel = {
     billAmount:number,
     discountAmount:number,
     netTotal:number,
-    remarks: string | null
+    remarks: string | null,
+    status:string,
     salesDetails:SalesDetailViewModel[]
 }
 export type SalesDetailViewModel = {

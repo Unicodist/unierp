@@ -10,7 +10,7 @@ export function Sidebar() {
             width='inherit'
             bgColor='#53667B'>
             <VStack >
-                <HStack color='#FFFFFF' fontSize={30} as={Link} href='/'>
+                <HStack color='#FFFFFF' fontSize={30} as={'a'} href='/'>
                     <GiBrandyBottle/>
                     <Text>ERP</Text>
                 </HStack>

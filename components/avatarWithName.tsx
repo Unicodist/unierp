@@ -3,23 +3,25 @@ import React, {Component, PropsWithChildren, ReactNode} from "react";
 import AvatarProps from "@/types/avatarprops";
 import {getImage} from "@/helpers/image-helper";
 class AvatarWithName extends Component {
-    props:AvatarProps
+    name:string
+    designation:string
     constructor(props:AvatarProps) {
         super(props);
-        this.props = props
+        this.name = props.name
+        this.designation = props.designation
     }
     render() {
         return (
             <Flex>
                 <Box mx='3'>
                     <Text fontWeight='bold'>
-                        {this.props.name}
+                        {this.name}
                     </Text>
-                    <Text fontSize='sm'>{this.props.designation}</Text>
+                    <Text fontSize='sm'>{this.designation}</Text>
                 </Box>
                 <Menu>
                     <MenuButton>
-                        <Avatar src={getImage('ashishneupane999@gmail.com')}/>
+                        <Avatar src={getImage('sen.sushan@gmail.com')}/>
                     </MenuButton>
                     <MenuList>
                         <MenuItem>Settings</MenuItem>
