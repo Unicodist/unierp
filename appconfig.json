@@ -1,5 +1,5 @@
 {
-  "hostUrl": "https://localhost:55275",
+  "hostUrl": "http://103.198.9.245:55275",
   "rootSuffix": "/api",
   "routes": {
     "loginRoute": "/login",

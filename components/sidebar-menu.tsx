@@ -19,9 +19,9 @@ class SidebarMenu extends Component<SideBarMenuProps> {
             <Box width={'100%'} mt={10} px={3}>
                 <Text ml={3}>Menu</Text>
                 {
-                    this.menu.map((menuItem)=>{
+                    this.menu.map((menuItem,i)=>{
                         return(
-                            <Link href={menuItem.url} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+                            <Link key={i} href={menuItem.url} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
                                 <Flex
                                     align="center"
                                     borderRadius={2}

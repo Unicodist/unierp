@@ -1,6 +1,6 @@
 import {IconType} from "react-icons";
-import {BiPurchaseTagAlt} from "react-icons/bi";
 import {AiFillHome, AiFillTags} from "react-icons/ai";
+import {FaCashRegister} from "react-icons/fa";
 
 export type MenuElement = {
     icon:IconType
@@ -19,5 +19,10 @@ export const routeMenu: MenuElement[] = [
         icon:AiFillTags,
         title:'Purchase',
         url:'/purchase'
+    },
+    {
+        icon:FaCashRegister,
+        title:'Sales',
+        url:'/sales'
     }
 ]
