@@ -1,0 +1,8 @@
+export type GridQueryModel = {
+    pageSize?: number,
+    pageNumber?: number,
+    sortBy?: string,
+    sortAsc: boolean,
+    filter: {},
+    total: number
+}
