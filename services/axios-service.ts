@@ -1,4 +1,3 @@
-import * as console from "console";
 import {AxiosResponse} from "axios";
 
 class AxiosService{
@@ -6,13 +5,16 @@ class AxiosService{
     config = require('../appconfig.json');
     private _url: string;
     constructor() {
-        this._url = this.config.baseUrl+this.config.rootSuffix
+        this._url = this.config.hostUrl+this.config.rootSuffix
     }
     setUrl(url:string){
-        this._url = url;
+        this._url += url;
 }
-    get(callback:()=>void){
-        this.axios.get(this._url).then(callback).catch((err:any)=>{console.log(err)})
+    async get<ViewModel>():Promise<ViewModel>{
+        console.log(this._url)
+        var result = await this.axios.get(this._url).
+        catch((err:any)=>{console.log(err)})
+        return result && result.data;
     }
     post(props:any,callback:(response:AxiosResponse)=>void){
         this.axios.post(this._url).then(callback).catch((err:any)=>{console.log(err)})

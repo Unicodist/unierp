@@ -6,7 +6,6 @@ export type SalesViewModel = {
     discountAmount:number,
     netTotal:number,
     remarks: string | null,
-    status:string,
     salesDetails:SalesDetailViewModel[]
 }
 export type SalesDetailViewModel = {

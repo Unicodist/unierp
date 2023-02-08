@@ -1,10 +1,17 @@
 {
-  "hostUrl": "http://localhost:55276",
+  "hostUrl": "https://localhost:55275",
   "rootSuffix": "/api",
   "routes": {
     "loginRoute": "/login",
     "account": {
       "all": "/account"
+    },
+    "sales":{
+      "all":"/sales"
+    },
+    "purchase":{
+      "all": "/purchase",
+      "page": "/purchase/page"
     }
   }
 }

@@ -14,7 +14,6 @@ export const salesColumns:Column[] = [
     {heading:'Discount amount',key:'discountAmount'},
     {heading:'Net total',key:'netTotal'},
     {heading:'Remarks',key:'remarks'},
-    {heading:'Status',key:'status',renderer:(item)=>renderBadgeWithStatus(item)}
 ]
 
 function renderBadgeWithStatus(status:string){

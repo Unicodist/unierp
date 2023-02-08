@@ -1,12 +1,5 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
 import {
-    Avatar,
     Box,
-    Flex,
-    Heading,
     Stat,
     StatArrow,
     StatGroup,
@@ -14,22 +7,30 @@ import {
     StatLabel,
     StatNumber
 } from "@chakra-ui/react";
-
-const inter = Inter({ subsets: ['latin'] })
-
+import Hero from "@/components/hero";
+import React from "react";
+import hyperlink from "@/types/hyperlink";
 export default function Home() {
+
+    const path:hyperlink[] = [
+        {title:'home',url:'/home'},
+        {title:'dashboard',url:'/home/dashboard'}
+    ]
   return (
-      <Box padding='20px'>
-          <StatGroup>
-              <Stat>
-                  <StatLabel>Income</StatLabel>
-                  <StatNumber>56</StatNumber>
-                  <StatHelpText>
-                      <StatArrow type='increase'/>
-                      45%
-                  </StatHelpText>
-              </Stat>
-          </StatGroup>
-      </Box>
+      <>
+          <Hero path={path} title='Dashboard'/>
+          <Box padding='20px'>
+              <StatGroup>
+                  <Stat>
+                      <StatLabel>Income</StatLabel>
+                      <StatNumber>56</StatNumber>
+                      <StatHelpText>
+                          <StatArrow type='increase'/>
+                          45%
+                      </StatHelpText>
+                  </Stat>
+              </StatGroup>
+          </Box>
+      </>
       )
 }

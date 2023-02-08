@@ -6,12 +6,12 @@ import Link from "next/link";
 class Hero extends Component {
     props:HeroProps
     constructor(props:HeroProps) {
-        super(props);
+        super(props)
         this.props = props
     }
     render() {
         return (
-            <Box padding='20px'>
+            <Box padding='20px' bgColor={'#81a1c122'}>
                 <Breadcrumb fontWeight='medium' separator='✦'>
                     {this.props.path.map((item)=>{
                         return (
